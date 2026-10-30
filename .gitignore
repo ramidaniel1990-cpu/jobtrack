@@ -1,0 +1,45 @@
+node_modules/
+dist/
+coverage/
+*.local
+.env.local
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+.firebase/
+.firebase-cli/
+.npm-cache/
+
+# Local environment files; keep only safe, documented templates.
+.env
+.env.*
+!.env.example
+!.env.emulator
+
+# Logs, emulator downloads and exported local data.
+*.log
+*.log.*
+logs/
+.firebase-emulators/
+emulator-data/
+emulator-export*/
+firestore_export/
+auth_export/
+firebase-export-metadata.json
+*.jar
+
+# Credentials and machine-local configuration.
+.credentials/
+credentials*.json
+*service-account*.json
+*serviceAccount*.json
+*firebase-adminsdk*.json
+application_default_credentials.json
+*.pem
+*.key
+*.p12
+*.pfx
+.npmrc
+.aws/
+.ssh/
+.codex/

@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@import "./styles/base.css";
+@import "./styles/searches.css";
+@import "./styles/forms.css";
+@import "./styles/offers.css";
+@import "./styles/shell.css";
+@import "./styles/session.css";

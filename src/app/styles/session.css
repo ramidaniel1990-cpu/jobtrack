@@ -1,0 +1,43 @@
+.session-panel {
+  background: #fff;
+  border: 1px solid #e1e5ef;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 28px;
+}
+.session-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  align-items: center;
+  color: #35425b;
+}
+.session-panel p {
+  font-size: 0.875rem;
+  color: #626d82;
+  margin-top: 10px;
+}
+.session-panel .notice.error {
+  color: #ab2841;
+}
+.session-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+.storage-state {
+  padding: 30px;
+  text-align: center;
+}
+.storage-state p {
+  margin-top: 12px;
+}
+.storage-busy {
+  margin: 16px 0;
+}
+@media (max-width: 600px) {
+  .session-actions .button {
+    flex: 1;
+  }
+}

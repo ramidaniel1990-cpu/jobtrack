@@ -1,0 +1,202 @@
+.offers-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  margin: 25px 0;
+}
+.search-diagnostics {
+  margin-top: 16px;
+}
+.search-diagnostics summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.search-diagnostics ul {
+  margin: 12px 0 0;
+  padding-left: 22px;
+}
+.search-diagnostics li + li {
+  margin-top: 10px;
+}
+.search-diagnostics summary:focus-visible {
+  outline: 3px solid #818cf8;
+  outline-offset: 4px;
+}
+.offers-toolbar > .muted {
+  margin-right: auto;
+  font-size: 0.875rem;
+}
+.toolbar-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: #68738a;
+}
+.toolbar-field select {
+  width: auto;
+  font-size: 1rem;
+  padding: 0.5rem 0.7rem;
+  max-width: 230px;
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.offer-card {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.company-name {
+  font-size: 0.875rem;
+  color: #68738a;
+  margin-bottom: 5px;
+}
+.offer-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+.offer-card > .muted {
+  font-size: 0.875rem;
+}
+.salary {
+  font-size: 0.875rem;
+  font-weight: 650;
+  margin-top: 12px;
+}
+.match-note {
+  border-left: 2px solid #b8b3f5;
+  padding: 3px 0 3px 13px;
+  margin: 3px 0 20px;
+}
+.match-note .eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.07em;
+}
+.match-note p {
+  font-size: 1rem;
+  color: #67718a;
+  margin-top: 6px;
+}
+.offer-meta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #626d82;
+  padding-bottom: 17px;
+}
+.offer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  border-top: 1px solid #e8eaf1;
+  padding-top: 17px;
+}
+.detail-link {
+  font-size: 0.875rem;
+  color: #554bc5;
+  margin-left: auto;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 0.875rem;
+  color: #626a98;
+}
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+}
+.detail-content {
+  padding: 28px;
+}
+.detail-content h2 {
+  margin-bottom: 16px;
+}
+.detail-content > p {
+  color: #647087;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+.detail-content > .eyebrow {
+  display: block;
+  margin-bottom: 10px;
+}
+.detail-content > .notice {
+  margin-top: 22px;
+  font-size: 0.875rem;
+}
+.detail-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+}
+.offer-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 30px 0 0;
+}
+.offer-facts dt {
+  color: #626d82;
+  font-size: 0.875rem;
+}
+.offer-facts dd {
+  margin: 4px 0 0;
+  font-size: 0.875rem;
+  font-weight: 550;
+}
+@media (max-width: 900px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+  .offer-actions .detail-link {
+    margin-left: auto;
+  }
+}
+@media (max-width: 600px) {
+  .offer-card {
+    padding: 21px;
+  }
+  .offers-toolbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .offers-toolbar > .muted {
+    width: 100%;
+    margin: 0;
+  }
+  .toolbar-field {
+    flex: 1;
+  }
+  .toolbar-field select {
+    width: 100%;
+    max-width: 100%;
+  }
+  .detail-content {
+    padding: 22px;
+  }
+  .offer-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .offer-actions .button {
+    flex: 1;
+  }
+  .detail-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+  }
+}

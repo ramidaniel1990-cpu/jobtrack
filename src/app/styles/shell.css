@@ -1,0 +1,351 @@
+/* Application shell */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 15px;
+  z-index: 100;
+  transform: translateY(-160%);
+  background: #4f46e5;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 242px minmax(0, 1fr);
+}
+.sidebar {
+  background: #fff;
+  border-right: 1px solid #e3e7f0;
+  padding: 35px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+.brand {
+  font-size: 1.5rem;
+  letter-spacing: -0.055em;
+  font-weight: 750;
+  display: flex;
+  align-items: center;
+  color: #192640;
+  gap: 10px;
+  padding: 0 7px;
+}
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: #5147dd;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.25rem;
+  letter-spacing: -0.1em;
+}
+.brand-icon > span {
+  font-size: 0.875rem;
+  align-self: flex-start;
+  margin-top: 4px;
+  letter-spacing: 0;
+}
+.brand-dot {
+  color: #655bed;
+  margin-left: -10px;
+}
+.nav-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  font-weight: 700;
+  color: #626d82;
+  margin: 47px 12px 13px;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: #67738a;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.nav-link > span {
+  font-size: 1.1rem;
+  width: 20px;
+  text-align: center;
+}
+.nav-link > small {
+  margin-left: auto;
+  background: #edf0f6;
+  color: #626d82;
+  font-size: 0.875rem;
+  min-width: 21px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 1px 5px;
+}
+.nav-link.router-link-exact-active {
+  color: #5045d2;
+  background: #eeedfd;
+}
+.nav-link.router-link-exact-active > small {
+  background: #dfdcfb;
+  color: #554bc5;
+}
+.sidebar-note {
+  margin-top: auto;
+  padding: 18px 13px 20px;
+  font-size: 0.875rem;
+  color: #536078;
+}
+.sidebar-note > p {
+  margin: 9px 0 10px;
+  line-height: 1.8;
+  color: #626d82;
+  font-size: 0.875rem;
+}
+.sidebar-note > small {
+  font-size: 0.875rem;
+  color: #626d82;
+}
+.demo-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7b72dc;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.sidebar-footer {
+  border-top: 1px solid #edf0f6;
+  padding: 20px 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #556079;
+}
+.sidebar-footer > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.sidebar-footer .avatar {
+  flex-shrink: 0;
+}
+.sidebar-footer small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #626d82;
+  margin-top: 3px;
+}
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 33px;
+  height: 33px;
+  background: #eeedf8;
+  border-radius: 50%;
+  color: #625b8b;
+  font-size: 0.875rem;
+}
+.main-shell {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.topbar {
+  min-height: 79px;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  border-bottom: 1px solid #e6e9f0;
+  padding: 0 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fbfcfe;
+  font-size: 0.875rem;
+  color: #626d82;
+}
+.demo-badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  font-weight: 650;
+  color: #625b8b;
+  background: #f0eff9;
+  border: 1px solid #e5e2f4;
+  border-radius: 20px;
+  padding: 5px 11px;
+}
+.main-shell main {
+  padding: 38px 43px 45px;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  outline: none;
+  flex: 1;
+}
+.main-shell main > .notice {
+  margin-bottom: 20px;
+}
+.notice.error {
+  border-color: #f3c6cc;
+  background: #fff1f2;
+  color: #ab2841;
+}
+.notice.success {
+  border-color: #c8e5d5;
+  background: #eef9f2;
+  color: #2c7551;
+}
+.page-footer {
+  border-top: 1px solid #e5e8f0;
+  margin: 0 43px;
+  padding: 19px 0 22px;
+  color: #626d82;
+  font-size: 0.875rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media (min-width: 1500px) {
+  .app-shell {
+    grid-template-columns: 260px minmax(0, 1fr);
+  }
+  .sidebar {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .main-shell main {
+    padding: 46px 60px;
+  }
+  .topbar {
+    padding: 0 60px;
+  }
+  .page-footer {
+    margin: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .app-shell {
+    grid-template-columns: 210px minmax(0, 1fr);
+  }
+  .sidebar {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .main-shell main {
+    padding: 30px 25px;
+  }
+  .topbar {
+    padding: 0 25px;
+  }
+  .page-footer {
+    margin: 0 25px;
+  }
+  .stat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .stat span {
+    max-width: none;
+  }
+}
+@media (max-width: 760px) {
+  .app-shell {
+    display: block;
+  }
+  .sidebar {
+    height: auto;
+    position: static;
+    padding: 18px 20px 10px;
+    border-right: 0;
+    border-bottom: 1px solid #e4e7f0;
+  }
+  .brand {
+    font-size: 1.4rem;
+    padding: 0;
+  }
+  .brand-icon {
+    width: 31px;
+    height: 31px;
+  }
+  .nav-label,
+  .sidebar-note,
+  .sidebar-footer {
+    display: none;
+  }
+  .sidebar nav {
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 18px;
+  }
+  .nav-link {
+    flex: 1;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 6px;
+    font-size: 0.875rem;
+  }
+  .nav-link > span {
+    width: auto;
+  }
+  .nav-link > small {
+    margin-left: 0;
+    font-size: 0.875rem;
+  }
+  .topbar {
+    min-height: 48px;
+    padding: 8px 22px;
+    font-size: 0.875rem;
+  }
+  .main-shell main {
+    padding: 29px 21px;
+  }
+  .page-footer {
+    margin: 0 21px;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 380px) {
+  .sidebar {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .nav-link {
+    font-size: 0.875rem;
+    gap: 4px;
+  }
+  .nav-link > small {
+    display: none;
+  }
+  .main-shell main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .topbar {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

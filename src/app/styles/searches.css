@@ -1,0 +1,137 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0 35px;
+}
+.stat {
+  border: 1px solid #e2e6ef;
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.stat span {
+  font-size: 0.875rem;
+  color: #65718b;
+}
+.stat strong {
+  font-size: 1.8rem;
+  letter-spacing: -0.05em;
+  color: #303967;
+  font-weight: 650;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 20px;
+}
+.search-card {
+  padding: 23px;
+  display: flex;
+  flex-direction: column;
+}
+.search-card h2 {
+  margin-bottom: 7px;
+}
+.search-card > .muted {
+  font-size: 0.875rem;
+}
+.schedule-summary {
+  font-size: 0.875rem;
+  color: #526079;
+  margin-top: auto;
+  padding-top: 7px;
+}
+.schedule-summary > span:first-child {
+  font-size: 1rem;
+  margin-right: 4px;
+}
+.schedule-summary small {
+  display: block;
+  color: #876a36;
+  font-size: 0.875rem;
+}
+.last-run {
+  font-size: 0.875rem;
+  color: #626d82;
+  margin: 9px 0 18px;
+}
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.delete-confirm {
+  border-top: 1px solid #e6e9f1;
+  margin-top: 10px;
+  padding-top: 12px;
+  font-size: 0.875rem;
+}
+.delete-confirm p {
+  margin-bottom: 9px;
+}
+.demo-footnote {
+  display: flex;
+  gap: 15px;
+  padding: 25px 4px;
+  margin-top: 15px;
+  color: #69758c;
+  font-size: 0.875rem;
+}
+.demo-footnote > span {
+  font-size: 1.3rem;
+  color: #6c63d7;
+}
+.demo-footnote strong {
+  font-size: 0.875rem;
+  color: #505d77;
+  font-weight: 650;
+}
+.demo-footnote p {
+  margin-top: 4px;
+  max-width: 720px;
+}
+
+@media (min-width: 1300px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .stat {
+    padding: 15px;
+  }
+  .stat span {
+    max-width: 90px;
+  }
+}
+@media (max-width: 600px) {
+  .stats-grid {
+    gap: 8px;
+    margin-bottom: 26px;
+  }
+  .stat {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 13px 11px;
+    gap: 4px;
+  }
+  .stat span {
+    font-size: 0.875rem;
+  }
+  .stat strong {
+    font-size: 1.65rem;
+  }
+  .search-card {
+    padding: 21px;
+  }
+  .demo-footnote {
+    gap: 10px;
+  }
+}

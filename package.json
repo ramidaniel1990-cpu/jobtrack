@@ -1,0 +1,53 @@
+{
+  "name": "jobtrack",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "vue-tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "dev:emulators": "vite --mode emulator --host 127.0.0.1",
+    "emulators:start": "node scripts/firebase-local.mjs start",
+    "test:emulators": "node scripts/firebase-local.mjs test",
+    "test:emulators:run": "node scripts/run-emulator-tests.mjs",
+    "test:auth-emulator": "node scripts/firebase-local.mjs auth",
+    "test:auth-emulator:run": "vitest run --config vitest.auth-emulator.config.ts"
+  },
+  "dependencies": {
+    "@vue/devtools-api": "^8.2.1",
+    "firebase": "^12.19.0",
+    "pinia": "^4.1.0",
+    "vue": "^3.5.44",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@firebase/rules-unit-testing": "^5.0.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "eslint": "^10.13.0",
+    "eslint-plugin-vue": "^10.12.0",
+    "firebase-tools": "^15.34.1",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.0",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5",
+    "vue-tsc": "^3.3.13"
+  },
+  "overrides": {
+    "@firebase/app": "0.16.2",
+    "@firebase/app-compat": "0.5.18",
+    "@grpc/grpc-js": "1.13.6",
+    "@opentelemetry/core": "2.8.0",
+    "gaxios": {
+      "uuid": "11.1.1"
+    }
+  }
+}
